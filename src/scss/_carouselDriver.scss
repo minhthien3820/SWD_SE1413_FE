@@ -1,0 +1,176 @@
+#carousel__driver {
+  width: 90%;
+  overflow: hidden;
+  margin: auto;
+  background-color: transparent;
+  .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px !important;
+      height: 390px;
+      cursor: pointer;
+      .imgBx {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+
+        img {
+          width: 100%;
+        }
+        .reviewScore {
+          font-size: 10px;
+          background-color: rgba(12, 27, 54, 0.8);
+          border: 1px solid #1f2e46;
+          border-radius: 4px;
+          padding: 2px;
+          position: absolute;
+          top: 12px;
+          right: 12px;
+          color: #fff;
+          width: 54px;
+          text-align: center;
+          line-height: 1.1;
+          .ratingNumber {
+            font-size: 16px;
+            transform: scaleY(1.2);
+          }
+        }
+        .startDay {
+          font-size: 16px;
+          background-color: rgba(12, 27, 54, 0.8);
+          border: 1px solid #1f2e46;
+          border-radius: 4px;
+          padding: 2px;
+          position: absolute;
+          bottom: 12px;
+          right: 12px;
+          color: #fff;
+        }
+        .overlayDriver {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to top, black, transparent);
+          transition: all 0.2s;
+          visibility: hidden;
+        }
+        .playButton {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 3;
+          border: 1px solid #fff;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          line-height: 55px;
+          text-align: center;
+          font-size: 30px;
+          visibility: hidden;
+          transition: all 0.2s;
+          cursor: pointer;
+          .playIcon {
+            font-size: 2rem;
+            color: #fff;
+          }
+          &:hover {
+            background: rgba(0, 0, 0, 0.548);
+          }
+        }
+      }
+      .detail {
+        box-sizing: border-box;
+        margin-top: 10px;
+        .driverTitle {
+          position: relative;
+          h3 {
+            height: 42px;
+            max-height: 42px;
+            text-align: left;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            margin-left: 5px;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            .ageLimit {
+              font-size: 14px;
+              background-color: #fb4226;
+              border-radius: 4px;
+              padding: 0 5px;
+              color: #fff;
+              min-width: 33px;
+              text-align: center;
+              display: inline-block;
+              margin-right: 8px;
+            }
+          }
+          .driverDuration {
+            margin-left: 5px;
+            font-size: 13px;
+            color: #4a4a4a;
+            margin-bottom: 15px;
+            margin-top: 8px;
+          }
+          .buyTicket {
+            position: absolute;
+            visibility: hidden;
+            top: 0;
+            left: 1%;
+            display: block;
+            width: 98%;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 18px !important;
+            text-transform: uppercase;
+            padding: 10px;
+            text-align: center;
+            background: #fb4226;
+            transition: all 0.2s;
+            text-decoration: none;
+          }
+        }
+      }
+      &:hover {
+        .imgBx {
+          .overlayDriver,
+          .playButton {
+            transition: all 0.2s;
+            visibility: visible;
+          }
+        }
+        .detail {
+          .driverTitle {
+            .buyTicket {
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+    .swiper-pagination-bullet {
+      background-color: #d8d8d8;
+      width: 12px;
+      height: 12px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #fb4226;
+    }
+    //   .swiper-pagination-bullets {
+    //     bottom: 12%;
+    //   }
+  }
+}
