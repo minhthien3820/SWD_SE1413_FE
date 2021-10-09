@@ -1,0 +1,69 @@
+.carousel__home {
+  position: relative;
+  padding-bottom: 43%;
+  .swiper-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    .swiper-wrapper {
+      padding-inline-start: 0px;
+      img {
+        width: 100%!important;
+        height: 100%;
+      }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #e4e6eb;
+    }
+    .swiper-pagination-bullet {
+      background-color: #d8d8d8;
+      width: 12px;
+      height: 12px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #fb4226;
+    }
+    .swiper-pagination-bullets {
+      bottom: 12%;
+    }
+  }
+}
+
+@include responsive("medium") {
+  .carousel__home {
+    .swiper-container {
+      .swiper-button-next,
+      .swiper-button-prev {
+          &::after {
+            font-size: 30px;
+          }
+      }
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}
+@include responsive("small") {
+    .carousel__home {
+      .swiper-container {
+        .swiper-button-next,
+        .swiper-button-prev {
+            &::after {
+                font-size: 20px;
+              }
+        }
+        .swiper-pagination-bullet {
+            width: 7px;
+            height: 7px;
+          }
+      }
+    }
+  }
